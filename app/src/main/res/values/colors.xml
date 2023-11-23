@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="black_lighter_text">#E6000000</color>
+    <color name="black_selected_dot">#80000000</color>
+    <color name="black_transparent_dots">#38000000</color>
+    <color name="black_input_text">#14142B</color>
+    <color name="grey_dark_text">#2C3035</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_dots_background">#FFFFFF</color>
+    <color name="grey_inner_background">#F6F6F9</color>
+    <color name="grey_peculiarities_background">#FBFBFC</color>
+    <color name="grey_border_line_dark">#26828796</color>
+    <color name="grey_text">#828796</color>
+    <color name="grey_hint_text">#A9ABB7</color>
+    <color name="grey_border_line_light">#E8E9EC</color>
+    <color name="yellow_rating_background">#33FFC700</color>
+    <color name="yellow_rating_text">#FFA800</color>
+    <color name="blue_button">#0D72FF</color>
+    <color name="blue_transparent">#1A0D72FF</color>
+    <color name="red_error">#4DEB5757</color>
+    <color name="error_text">#EB5757</color>
+</resources>

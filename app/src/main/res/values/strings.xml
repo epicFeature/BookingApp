@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BookingApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="paid_fragment_text">Подтверждение заказа №order_number может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.</string>
+    <string name="info_reason_text">Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту</string>
+</resources>
