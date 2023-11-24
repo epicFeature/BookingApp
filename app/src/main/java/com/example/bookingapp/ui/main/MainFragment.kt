@@ -56,19 +56,4 @@ class MainFragment : Fragment() {
         }
         viewModel.makeApiCall()
     }
-
-    /*private fun imageSlider() {
-        val tempImages = listOf(
-            "https://cdn.iportal.ru/news/2020/99/preview/d23ee289e327bed84b1abd98e409696b0f1d05b9_1920_1280_c.jpg",
-            "https://q.bstatic.com/xdata/images/hotel/max1024x768/267647265.jpg?k=c8233ff42c39f9bac99e703900a866dfbad8bcdd6740ba4e594659564e67f191&o=",
-            "https://worlds-trip.ru/wp-content/uploads/2022/10/white-hills-resort-5.jpeg"
-        )
-        val dotsIndicator = binding.dotsIndicatorHotel
-        val viewPager = binding.viewPagerHotel
-        val viewPagerAdapter = ViewPagerHotelAdapter(this.requireContext(), tempImages)
-        viewPager.adapter = viewPagerAdapter
-        dotsIndicator.attachTo(viewPager)
-    }
-*/
-
 }

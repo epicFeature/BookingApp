@@ -18,7 +18,7 @@ class PaidFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentPaidBinding.inflate(inflater, container, false)
         setUniqueId()
         return binding.root
@@ -35,9 +35,9 @@ class PaidFragment : Fragment() {
     }
 
     private fun setUniqueId(){
-        var newOrderNumber: Int = Random.nextInt(1000000)
-        var orderNumberwithText = binding.orderNumberWithText.text.toString()
-        var newTextWithOrderNumber = orderNumberwithText.replace("order_number", "$newOrderNumber")
+        val newOrderNumber: Int = Random.nextInt(1000000)
+        val orderNumberWithText = binding.orderNumberWithText.text.toString()
+        val newTextWithOrderNumber = orderNumberWithText.replace("order_number", "$newOrderNumber")
         binding.orderNumberWithText.text = newTextWithOrderNumber
     }
 

@@ -12,7 +12,7 @@ import retrofit2.Response
 class MainViewModel : ViewModel() {
     var hotelLiveData = MutableLiveData<HotelInfo>()
 
-    fun emergeHotelInfo(data: MutableLiveData<HotelInfo>, response: Call<HotelInfo>) {
+    private fun emergeHotelInfo(data: MutableLiveData<HotelInfo>, response: Call<HotelInfo>) {
         response.enqueue(
             object : Callback<HotelInfo> {
                 override fun onResponse(call: Call<HotelInfo>, response: Response<HotelInfo>) {

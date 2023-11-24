@@ -19,5 +19,5 @@
     <color name="blue_button">#0D72FF</color>
     <color name="blue_transparent">#1A0D72FF</color>
     <color name="red_error">#4DEB5757</color>
-    <color name="error_text">#EB5757</color>
+    <color name="red_error_text">#EB5757</color>
 </resources>

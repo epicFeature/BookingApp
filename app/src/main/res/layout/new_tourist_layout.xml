@@ -28,9 +28,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="Первый турист"
+                android:text="@string/first_tourist"
                 android:textColor="@color/black"
-                android:textSize="22dp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/hide_show_tourist_sample_button"
@@ -71,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:background="@drawable/edit_text_background"
-                    android:hint="Имя" />
+                    android:hint="@string/name" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,7 +91,7 @@
                     android:background="@drawable/edit_text_background"
                     android:textColorHint="@color/grey_hint_text"
                     android:textColor="@color/black_input_text"
-                    android:hint="Фамилия" />
+                    android:hint="@string/surname" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,7 +114,7 @@
                     android:background="@drawable/edit_text_background"
                     android:textColorHint="@color/grey_hint_text"
                     android:textColor="@color/black_input_text"
-                    android:hint="Дата рождения" />
+                    android:hint="@string/birth_date" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -137,7 +137,7 @@
                     android:background="@drawable/edit_text_background"
                     android:textColorHint="@color/grey_hint_text"
                     android:textColor="@color/black_input_text"
-                    android:hint="Гражданство" />
+                    android:hint="@string/citizenship" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -157,7 +157,7 @@
                     android:background="@drawable/edit_text_background"
                     android:textColorHint="@color/grey_hint_text"
                     android:textColor="@color/black_input_text"
-                    android:hint="Номер загранпаспорта" />
+                    android:hint="@string/passport_number" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -180,7 +180,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:background="@drawable/edit_text_background"
-                    android:hint="Срок действия загранпаспорта"
+                    android:hint="@string/passport_validation_date"
                     android:textColor="@color/black_input_text"
                     android:textColorHint="@color/grey_hint_text" />
 

@@ -14,7 +14,7 @@ import retrofit2.Response
 class HotelRoomsViewModel : ViewModel() {
     var hotelRoomsLiveData = MutableLiveData<List<Room>>()
 
-    fun emergeHotelRoomsInfo(dataList: MutableLiveData<List<Room>>, response: Call<HotelRoomsInfo>) {
+    private fun emergeHotelRoomsInfo(dataList: MutableLiveData<List<Room>>, response: Call<HotelRoomsInfo>) {
         response.enqueue(
             object : Callback<HotelRoomsInfo> {
                 override fun onResponse(

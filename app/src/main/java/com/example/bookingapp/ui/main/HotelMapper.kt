@@ -17,18 +17,11 @@ class HotelMapper(
             hotelName.text = hotelInfo.name
             hotelAddress.text=hotelInfo.address
             hotelSum.text = "от ${hotelInfo.minimalPrice.toString()} ₽"
-            //переделать на нормальный перебор
             peculiarItemFirst.text = hotelInfo.aboutTheHotel.peculiarities[0]
             peculiarItemSecond.text = hotelInfo.aboutTheHotel.peculiarities[1]
             peculiarItemThird.text = hotelInfo.aboutTheHotel.peculiarities[2]
             peculiarItemForth.text=hotelInfo.aboutTheHotel.peculiarities[3]
             hotelDesription.text = hotelInfo.aboutTheHotel.description
-
-            /*titleRu.text = cinemaData.name
-            titleEng.text = cinemaData.alternativeName
-            rating.text = cinemaData.rating?.kp.toString()
-            genresMapping(cinemaData)
-            discription.text = cinemaData.description*/
         }
         imageSlider(hotelInfo)
     }

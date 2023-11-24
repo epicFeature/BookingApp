@@ -26,7 +26,8 @@
                 android:layout_height="wrap_content"
                 android:paddingEnd="30dp"
                 android:paddingVertical="5dp"
-                android:src="@drawable/arrow_left"/>
+                android:src="@drawable/arrow_left"
+                tools:ignore="RtlSymmetry" />
 
             <TextView
                 android:id="@+id/toolbar_title"
@@ -34,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Заказ оплачен" />
+                android:text="@string/order_paid" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -67,7 +68,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
-        android:text="Ваш заказ принят в работу"
+        android:text="@string/order_started_processing"
         android:gravity="center"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -91,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/text_your_order_accepted" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/boarderline"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/grey_border_line_light"
@@ -116,8 +117,8 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="12dp"
             android:background="@drawable/image_placeholder"
-            android:text="Супер!"
-            android:textSize="16dp"
+            android:text="@string/word_super"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
