@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/basic_layout_background"
@@ -53,7 +55,7 @@
 
     <TextView
         android:id="@+id/room_name"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
@@ -113,10 +115,11 @@
 
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/see_more_about_room"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/additional_room_info_background"
@@ -132,25 +135,18 @@
             android:text="@string/read_more_about_room"
             android:textColor="@color/blue_button"
             android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="RtlSymmetry" />
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/see_more_about_room_arrow_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingVertical="5dp"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/see_more_about_room_text"
-            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/arrow_right_blue" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/room_sum"
@@ -181,7 +177,7 @@
 
     <Button
         android:id="@+id/choose_room_button"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="16dp"
@@ -193,4 +189,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/room_sum" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

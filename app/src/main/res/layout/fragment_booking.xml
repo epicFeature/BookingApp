@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/grey_inner_background"
+    android:orientation="vertical"
     tools:context=".ui.booking.BookingFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -24,9 +25,9 @@
                 android:id="@+id/back_button_to_hotel_rooms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="30dp"
                 android:paddingVertical="5dp"
-                android:src="@drawable/arrow_left"/>
+                android:paddingEnd="30dp"
+                android:src="@drawable/arrow_left" />
 
             <TextView
                 android:id="@+id/toolbar_title"
@@ -40,38 +41,31 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout_booking">
-
-        <ScrollView
+            <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:orientation="vertical"
                     android:background="@drawable/basic_layout_background">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <LinearLayout
                         android:id="@+id/rating_background"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
-                        android:background="@drawable/rating_background"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:orientation="horizontal"
+                        android:background="@drawable/rating_background">
 
                         <ImageView
                             android:id="@+id/rating_star_image"
@@ -101,25 +95,22 @@
                             app:layout_constraintStart_toEndOf="@+id/rating_star_image"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/booking_hotel_name"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
                         android:text="@string/hotel_name"
                         android:textSize="22sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/rating_background" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/booking_hotel_address"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
@@ -128,17 +119,14 @@
                         android:text="@string/red_square_moscow"
                         android:textColor="@color/blue_button"
                         android:textSize="14sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/booking_hotel_name" />
+                        android:textStyle="bold"/>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/basic_layout_background">
 
@@ -404,17 +392,18 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/basic_layout_background">
+                    android:background="@drawable/basic_layout_background"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/customer_info_title"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
@@ -422,14 +411,55 @@
                         android:text="@string/customer_info"
                         android:textColor="@color/black"
                         android:textSize="22sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phone_text_input_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColorHint="@color/grey_hint_text"
+                        app:helperTextTextColor="@color/red_error_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phone_text_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:background="@drawable/edit_text_background"
+                            android:hint="@string/phone_number"
+                            android:inputType="phone"
+                            android:textColor="@color/black_input_text"
+                            android:textColorHint="@color/grey_hint_text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/email_text_input_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColorHint="@color/grey_hint_text"
+                        app:helperTextTextColor="@color/red_error_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email_text_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:background="@drawable/edit_text_background"
+                            android:hint="@string/mail"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/black_input_text"
+                            android:textColorHint="@color/grey_hint_text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
                         android:id="@+id/info_reason_text"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
@@ -437,71 +467,17 @@
                         android:layout_marginBottom="16dp"
                         android:text="@string/info_reason_text"
                         android:textColor="@color/grey_text"
-                        android:textSize="14sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/email_text_input_container" />
+                        android:textSize="14sp" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/phone_text_input_container"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginEnd="16dp"
-                        android:textColorHint="@color/grey_hint_text"
-                        app:helperTextTextColor="@color/red_error_text"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/customer_info_title">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/phone_text_input"
-                            android:layout_width="match_parent"
-                            android:layout_height="52dp"
-                            android:background="@drawable/edit_text_background"
-                            android:textColorHint="@color/grey_hint_text"
-                            android:textColor="@color/black_input_text"
-                            android:inputType="phone"
-                            android:hint="@string/phone_number" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/email_text_input_container"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginEnd="16dp"
-                        android:textColorHint="@color/grey_hint_text"
-                        app:helperTextTextColor="@color/red_error_text"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/phone_text_input_container">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/email_text_input"
-                            android:layout_width="match_parent"
-                            android:layout_height="52dp"
-                            android:background="@drawable/edit_text_background"
-                            android:textColorHint="@color/grey_hint_text"
-                            android:inputType="textEmailAddress"
-                            android:textColor="@color/black_input_text"
-                            android:hint="@string/mail" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tourist1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/basic_layout_background">
+                    android:background="@drawable/basic_layout_background"
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/tourist1_fold"
@@ -558,9 +534,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:background="@drawable/edit_text_background"
-                                android:textColorHint="@color/grey_hint_text"
+                                android:hint="@string/name"
                                 android:textColor="@color/black_input_text"
-                                android:hint="@string/name" />
+                                android:textColorHint="@color/grey_hint_text" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -578,9 +554,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:background="@drawable/edit_text_background"
-                                android:textColorHint="@color/grey_hint_text"
+                                android:hint="@string/surname"
                                 android:textColor="@color/black_input_text"
-                                android:hint="@string/surname" />
+                                android:textColorHint="@color/grey_hint_text" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -601,9 +577,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:background="@drawable/edit_text_background"
-                                android:textColorHint="@color/grey_hint_text"
+                                android:hint="@string/birth_date"
                                 android:textColor="@color/black_input_text"
-                                android:hint="@string/birth_date" />
+                                android:textColorHint="@color/grey_hint_text" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -624,9 +600,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:background="@drawable/edit_text_background"
-                                android:textColorHint="@color/grey_hint_text"
+                                android:hint="@string/citizenship"
                                 android:textColor="@color/black_input_text"
-                                android:hint="@string/citizenship" />
+                                android:textColorHint="@color/grey_hint_text" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -644,9 +620,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:background="@drawable/edit_text_background"
-                                android:textColorHint="@color/grey_hint_text"
+                                android:hint="@string/passport_number"
                                 android:textColor="@color/black_input_text"
-                                android:hint="@string/passport_number" />
+                                android:textColorHint="@color/grey_hint_text" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -674,6 +650,7 @@
                                 android:textColorHint="@color/grey_hint_text" />
 
                         </com.google.android.material.textfield.TextInputLayout>
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -682,7 +659,9 @@
                     android:id="@+id/blank_layout_for_new_tourist"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical">
+
+                </LinearLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -876,17 +855,12 @@
 
         </ScrollView>
 
-    </LinearLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_gravity="bottom">
 
         <Button
             android:id="@+id/pay_button"
@@ -904,4 +878,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
