@@ -18,4 +18,4 @@ BookingApp
       4) RecyclerView
       5) ViewPager with dotsIndicator
 
-      Screens:
+      Demo: https://github.com/epicFeature/BookingApp/assets/143340704/bd6a8d98-a1b2-4b39-80c6-f82288c51df2
