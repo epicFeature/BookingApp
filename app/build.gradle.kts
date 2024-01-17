@@ -60,7 +60,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
 
     //androidx navigation
-    implementation("androidx.navigation:navigation-fragment:2.7.6")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
 
     // retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -83,6 +84,9 @@ dependencies {
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     implementation("com.tbuonomo:dotsindicator:5.0")
     implementation("me.relex:circleindicator:2.1.6")
+
+    //mask
+    implementation ("com.github.santalu:mask-edittext:1.0.2")
 
     //test
     testImplementation("junit:junit:4.13.2")

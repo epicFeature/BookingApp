@@ -7,6 +7,7 @@
     <color name="black_input_text">#14142B</color>
     <color name="grey_dark_text">#2C3035</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_transparent">#C9FFFFFF</color>
     <color name="grey_dots_background">#FFFFFF</color>
     <color name="grey_inner_background">#F6F6F9</color>
     <color name="grey_peculiarities_background">#FBFBFC</color>
@@ -20,4 +21,5 @@
     <color name="blue_transparent">#1A0D72FF</color>
     <color name="red_error">#4DEB5757</color>
     <color name="red_error_text">#EB5757</color>
+    <color name="pink_600">#D81B60</color>
 </resources>

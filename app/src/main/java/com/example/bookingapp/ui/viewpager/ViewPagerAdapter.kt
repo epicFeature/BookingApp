@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.LinearLayout
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.bumptech.glide.Glide
@@ -18,7 +18,7 @@ class ViewPagerAdapter(
     override fun getCount(): Int = imageList.size
 
     override fun isViewFromObject(view: View, `object`: Any) =
-        view === `object` as ConstraintLayout
+        view === `object` as LinearLayout
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view: View =

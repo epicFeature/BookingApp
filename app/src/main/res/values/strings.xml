@@ -36,7 +36,7 @@
     <string name="what_includes">Что включено</string>
     <string name="what_not_includes">Что не включено</string>
     <string name="to_room_choose">К выбору номера</string>
-    <string name="hotel_name_egypt">Лучший пятизвездочный отель в Хургаде, Египет</string>
+    <string name="hotel_name_egypt">Лучший отель в Хургаде, Египет</string>
     <string name="departure_from">Вылет из</string>
     <string name="kaliningrad">Калининград</string>
     <string name="country_city">Страна, город</string>
@@ -63,4 +63,15 @@
     <string name="to_payment">К оплате</string>
     <string name="_198_036">198 036 ₽</string>
     <string name="pay_173_456">Оплатить 173 456 ₽</string>
+    <string name="write_name">Необходимо ввести имя</string>
+    <string name="write_surname">Необходимо ввести фамилию</string>
+    <string name="write_citizenship">Необходимо ввести гражданство</string>
+    <string name="write_passport_number">Необходимо ввести номер паспорта</string>
+    <string name="phone_number_incorrect">Номер телефона введён некорректно</string>
+    <string name="email_incorrect">Почта введена некорректно</string>
+    <string name="write_birth_date">Введите дату рождения</string>
+    <string name="write_passport_expire_date">Введите срок действия загранпаспорта</string>
+    <string name="hotel_room_pictures">Изображения номера</string>
+    <string name="booking_text">Бронирование</string>
+
 </resources>

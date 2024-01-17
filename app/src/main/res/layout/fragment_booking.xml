@@ -11,10 +11,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout_booking"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_booking"
@@ -35,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Бронирование" />
+                android:text="@string/booking_text" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -69,14 +66,11 @@
 
                         <ImageView
                             android:id="@+id/rating_star_image"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginVertical="7dp"
                             android:layout_marginStart="10dp"
                             android:layout_weight="1"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/star_icon" />
 
                         <TextView
@@ -89,11 +83,7 @@
                             android:layout_marginBottom="5dp"
                             android:text="@string/_4_perfect"
                             android:textColor="@color/yellow_rating_text"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/rating_star_image"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
                     </LinearLayout>
 
@@ -130,267 +120,220 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/basic_layout_background">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/flight_from_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/flight_from_fixed_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/departure_from"
                             android:textColor="@color/grey_text"
                             android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"/>
 
                         <TextView
                             android:id="@+id/flight_from_info"
                             android:layout_width="0dp"
+                            android:layout_weight="2"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/kaliningrad"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/country_city_to_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/flight_from_layout">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/country_city_to_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/country_city"
                             android:textColor="@color/grey_text"
                             android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"/>
 
                         <TextView
                             android:id="@+id/country_city_to_info"
                             android:layout_width="0dp"
+                            android:layout_weight="2"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/russia_moscow"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/date_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/country_city_to_layout">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/date_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/dates"
                             android:textColor="@color/grey_text"
                             android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"/>
 
                         <TextView
                             android:id="@+id/date_info"
                             android:layout_width="0dp"
+                            android:layout_weight="2"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/_19_09_2023_27_09_2023"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/number_nights_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/date_layout">
+                        android:orientation="horizontal">
+
 
                         <TextView
                             android:id="@+id/number_nights_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/nights_amount"
                             android:textColor="@color/grey_text"
                             android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"/>
 
                         <TextView
                             android:id="@+id/number_nights_info"
                             android:layout_width="0dp"
+                            android:layout_weight="2"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/_5_nights"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/hotel_name_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/number_nights_layout">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/hotel_name_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/hotel"
                             android:textColor="@color/grey_text"
                             android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"/>
+
 
                         <TextView
                             android:id="@+id/booking_hotel_name_info"
                             android:layout_width="0dp"
+                            android:layout_weight="2"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/hotel_name"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/hotel_room_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/hotel_name_layout">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/hotel_room_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/room"
                             android:textColor="@color/grey_text"
                             android:textSize="16sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"/>
 
                         <TextView
                             android:id="@+id/hotel_room_info"
                             android:layout_width="0dp"
+                            android:layout_weight="2"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="140dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/standart_with_sp"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0" />
+                            android:textSize="16sp"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/meal_option_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="16dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/hotel_room_layout">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/meal_option_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/meal"
                             android:textColor="@color/grey_text"
                             android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"/>
 
                         <TextView
                             android:id="@+id/meal_option_info"
                             android:layout_width="0dp"
+                            android:layout_weight="2"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="140dp"
-                            android:text="@string/breakfast"
+                            android:text="@string/_5_nights"
                             android:textColor="@color/black"
                             android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            />
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -421,17 +364,19 @@
                         android:layout_marginTop="18dp"
                         android:layout_marginEnd="16dp"
                         android:textColorHint="@color/grey_hint_text"
-                        app:helperTextTextColor="@color/red_error_text">
+                        app:prefixText="+7">
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <com.santalu.maskedittext.MaskEditText
                             android:id="@+id/phone_text_input"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
-                            android:layout_height="52dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_background"
                             android:hint="@string/phone_number"
                             android:inputType="phone"
                             android:textColor="@color/black_input_text"
-                            android:textColorHint="@color/grey_hint_text" />
+                            android:textSize="16sp"
+                            app:met_mask=" ### ### ## ##" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -442,18 +387,16 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginEnd="16dp"
-                        android:textColorHint="@color/grey_hint_text"
-                        app:helperTextTextColor="@color/red_error_text">
+                        android:textColorHint="@color/grey_hint_text">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/email_text_input"
                             android:layout_width="match_parent"
-                            android:layout_height="52dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_background"
                             android:hint="@string/mail"
                             android:inputType="textEmailAddress"
-                            android:textColor="@color/black_input_text"
-                            android:textColorHint="@color/grey_hint_text" />
+                            android:textColor="@color/black_input_text" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -472,22 +415,24 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/tourist1"
+                    android:id="@+id/tourist"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/basic_layout_background"
                     android:orientation="vertical">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/tourist1_fold"
+                    <LinearLayout
+                        android:id="@+id/tourist_fold"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tourist1_info_title"
+                            android:id="@+id/tourist_info_title"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
@@ -495,53 +440,47 @@
                             android:text="@string/first_tourist"
                             android:textColor="@color/black"
                             android:textSize="22sp"
-                            android:textStyle="bold"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/hide_show_tourist_button"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textStyle="bold"/>
 
                         <ImageView
                             android:id="@+id/hide_show_tourist_button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
+                            android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/blue_arrow_up_button" />
 
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/tourist1_unfold"
+                        android:id="@+id/tourist_unfold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/text_input_layout_tourist1_name_container"
+                            android:id="@+id/text_input_layout_tourist_name"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="4dp"
                             android:layout_marginEnd="16dp"
+                            android:hint="@string/name"
                             android:textColorHint="@color/grey_hint_text">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/text_input_tourist1_name"
+                                android:id="@+id/text_input_tourist_name"
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:background="@drawable/edit_text_background"
-                                android:hint="@string/name"
-                                android:textColor="@color/black_input_text"
-                                android:textColorHint="@color/grey_hint_text" />
+                                android:inputType="text|textPersonName|textCapWords"
+                                android:textColor="@color/black_input_text" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/text_input_layout_tourist1_surname"
+                            android:id="@+id/text_input_layout_tourist_surname"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -550,64 +489,19 @@
                             android:textColorHint="@color/grey_hint_text">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/text_input_tourist1_surname"
+                                android:id="@+id/text_input_tourist_surname"
                                 android:layout_width="match_parent"
-                                android:layout_height="52dp"
+                                android:layout_height="wrap_content"
                                 android:background="@drawable/edit_text_background"
                                 android:hint="@string/surname"
+                                android:inputType="text|textCapWords"
                                 android:textColor="@color/black_input_text"
                                 android:textColorHint="@color/grey_hint_text" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/text_input_layout_tourist1_birth_date"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="6dp"
-                            android:layout_marginEnd="16dp"
-                            android:textColorHint="@color/grey_hint_text"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_surname">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/text_input_tourist1_birth_date"
-                                android:layout_width="match_parent"
-                                android:layout_height="52dp"
-                                android:background="@drawable/edit_text_background"
-                                android:hint="@string/birth_date"
-                                android:textColor="@color/black_input_text"
-                                android:textColorHint="@color/grey_hint_text" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/text_input_layout_tourist1_citizenship"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="6dp"
-                            android:layout_marginEnd="16dp"
-                            android:textColorHint="@color/grey_hint_text"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_birth_date">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/text_input_tourist1_citizenship"
-                                android:layout_width="match_parent"
-                                android:layout_height="52dp"
-                                android:background="@drawable/edit_text_background"
-                                android:hint="@string/citizenship"
-                                android:textColor="@color/black_input_text"
-                                android:textColorHint="@color/grey_hint_text" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/text_input_layout_tourist1_passport"
+                            android:id="@+id/text_input_layout_tourist_birth_date"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -616,36 +510,80 @@
                             android:textColorHint="@color/grey_hint_text">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/text_input_tourist1_passport"
+                                android:id="@+id/text_input_tourist_birth_date"
                                 android:layout_width="match_parent"
-                                android:layout_height="52dp"
+                                android:layout_height="wrap_content"
                                 android:background="@drawable/edit_text_background"
-                                android:hint="@string/passport_number"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/birth_date"
+                                android:inputType="datetime|date"
                                 android:textColor="@color/black_input_text"
                                 android:textColorHint="@color/grey_hint_text" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/text_input_layout_tourist1_passport_validity"
+                            android:id="@+id/text_input_layout_tourist_citizenship"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="16dp"
+                            android:textColorHint="@color/grey_hint_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/text_input_tourist_citizenship"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_text_background"
+                                android:hint="@string/citizenship"
+                                android:inputType="text"
+                                android:textColor="@color/black_input_text"
+                                android:textColorHint="@color/grey_hint_text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_layout_tourist_passport"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="16dp"
+                            android:textColorHint="@color/grey_hint_text">
+
+                            <com.santalu.maskedittext.MaskEditText
+                                android:id="@+id/text_input_tourist_passport"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_text_background"
+                                android:hint="@string/passport_number"
+                                android:inputType="number"
+                                android:textColor="@color/black_input_text"
+                                android:textSize="16sp"
+                                app:met_mask="##№#######" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_layout_tourist_passport_expiration"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="6dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="16dp"
-                            android:textColorHint="@color/grey_hint_text"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/text_input_layout_passport">
+                            android:textColorHint="@color/grey_hint_text">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/text_input_tourist1_passport_validity"
+                                android:id="@+id/text_input_tourist_passport_expiration"
                                 android:layout_width="match_parent"
-                                android:layout_height="52dp"
+                                android:layout_height="wrap_content"
+                                android:focusableInTouchMode="false"
                                 android:background="@drawable/edit_text_background"
                                 android:hint="@string/passport_validation_date"
+                                android:inputType="datetime|date"
                                 android:textColor="@color/black_input_text"
                                 android:textColorHint="@color/grey_hint_text" />
 
@@ -656,16 +594,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/blank_layout_for_new_tourist"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                </LinearLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/basic_layout_background">
 
@@ -673,6 +604,7 @@
                         android:id="@+id/add_tourist_info_title"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
@@ -680,202 +612,165 @@
                         android:text="@string/add_tourist"
                         android:textColor="@color/black"
                         android:textSize="22sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/add_tourist_button"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:textStyle="bold"/>
 
                     <ImageView
                         android:id="@+id/add_tourist_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="13dp"
+                        android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="13dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/white_plus_button" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/basic_layout_background">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/tour_price_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/tour_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/tour"
                             android:textColor="@color/grey_text"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/tour_price"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_186_600"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/fuel_surcharge_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tour_price_layout">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/fuel_surcharge_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/fuel_charge"
                             android:textColor="@color/grey_text"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
                         <TextView
                             android:id="@+id/fuel_surcharge_price"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_9_300"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/service_charge_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/fuel_surcharge_layout">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/service_charge_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/service_fee"
                             android:textColor="@color/grey_text"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
                         <TextView
                             android:id="@+id/service_charge_price"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_2_136"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/to_be_paid_layout"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/service_charge_layout">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/to_be_paid_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="16dp"
                             android:text="@string/to_payment"
                             android:textColor="@color/grey_text"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textSize="16sp"/>
 
                         <TextView
                             android:id="@+id/to_be_paid_price"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_198_036"
                             android:textColor="@color/blue_button"
                             android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textStyle="bold"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
         </ScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:orientation="vertical"
         android:layout_gravity="bottom">
 
         <Button
             android:id="@+id/pay_button"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="12dp"
             android:background="@drawable/image_placeholder"
             android:text="@string/pay_173_456"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="16sp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </LinearLayout>
