@@ -184,12 +184,12 @@ class BookingFragment : Fragment() {
 
     private fun showTouristFields() {
         binding.touristUnfold.visibility = View.VISIBLE
-        binding.hideShowTouristButton.setImageResource(R.drawable.blue_arrow_down_button)
+        binding.hideShowTouristButton.setImageResource(R.drawable.blue_arrow_up_button)
     }
 
     private fun hideTouristFields() {
         binding.touristUnfold.visibility = View.GONE
-        binding.hideShowTouristButton.setImageResource(R.drawable.blue_arrow_up_button)
+        binding.hideShowTouristButton.setImageResource(R.drawable.blue_arrow_down_button)
     }
 
     // customer info validation

@@ -66,7 +66,7 @@
     <string name="write_name">Необходимо ввести имя</string>
     <string name="write_surname">Необходимо ввести фамилию</string>
     <string name="write_citizenship">Необходимо ввести гражданство</string>
-    <string name="write_passport_number">Необходимо ввести номер паспорта</string>
+    <string name="write_passport_number">Введите корректный номер паспорта</string>
     <string name="phone_number_incorrect">Номер телефона введён некорректно</string>
     <string name="email_incorrect">Почта введена некорректно</string>
     <string name="write_birth_date">Введите дату рождения</string>
