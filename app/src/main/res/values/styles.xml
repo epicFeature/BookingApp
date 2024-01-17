@@ -2,7 +2,7 @@
 <resources>
 
     <style name="toolBarText" parent="TextAppearance.MaterialComponents.Button">
-        <item name="android:textSize">18dp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textAllCaps">false</item>
     </style>
@@ -17,5 +17,33 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">15dp</item>
         <item name="color">@color/white</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/blue_button</item>
+        <!--selected Item color-->
+        <item name="colorControlActivated">@color/blue_button</item>
+        <!-- arrow bordercolor(<>)-->
+        <item name="android:selectableItemBackgroundBorderless">@color/blue_transparent</item>
+        <!-- Highlight item color-->
+        <item name="colorControlHighlight">@color/blue_button</item>
+        <!--Calender Background color -->
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Ok Cancel Color-->
+        <item name="android:textColor">@color/pink_600</item>
+        <!-- Week TextColor-->
+        <item name="android:textColorSecondary">@color/pink_600</item>
+        <!-- Calender Number color arrow color (< >) -->
+        <item name="android:textColorPrimary">@color/grey_dark_text</item>
+        <!--day , month-->
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <!-- year-->
+        <item name="android:textColorSecondaryInverse">@color/white_transparent</item>
+        <item name="android:buttonBarButtonStyle">@style/MyButtonBarButtonStyle</item>
+
+    </style>
+    <style name="MyButtonBarButtonStyle">
+        <item name="android:textColor">@color/grey_dark_text</item>
+        <item name="backgroundTint">@android:color/transparent</item>
     </style>
 </resources>
